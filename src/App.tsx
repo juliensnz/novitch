@@ -1,19 +1,14 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
-import {Temoins} from './page/temoins';
-import {Information} from './page/information';
-import {Home} from './page/home';
-import styled from 'styled-components';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Temoins } from "./page/temoins";
+import { Information } from "./page/information";
+import { Home } from "./page/home";
+import styled from "styled-components";
 
 const Page = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   padding: 30px 120px;
   background-image: url("./images/background.jpg");
   background-size: cover;
@@ -26,8 +21,7 @@ const Page = styled.div`
     padding: 30px 30px;
   }
 `;
-const Header = styled.nav`
-`;
+const Header = styled.nav``;
 const Menu = styled.ul`
   display: flex;
   list-style: none;
@@ -38,9 +32,11 @@ const Menu = styled.ul`
   margin-bottom: 50px;
 
   @media (max-width: 675px) {
+    margin-bottom: 20px;
     flex-direction: column;
   }
 `;
+
 const Item = styled.ul`
   margin: 0 40px 0 0;
   text-transform: uppercase;
@@ -56,6 +52,8 @@ const Item = styled.ul`
   }
 `;
 
+export const baseUrl = "development" === process.env.NODE_ENV ? "" : "/novitch";
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -63,13 +61,13 @@ const App: React.FC = () => {
         <Header>
           <Menu>
             <Item>
-              <Link to="/">Home</Link>
+              <Link to={`${baseUrl}/`}>Home</Link>
             </Item>
             <Item>
-              <Link to="/temoins">Les témoins</Link>
+              <Link to={`${baseUrl}/temoins`}>Les témoins</Link>
             </Item>
             <Item>
-              <Link to="/information">Information</Link>
+              <Link to={`${baseUrl}/information`}>Informations</Link>
             </Item>
           </Menu>
         </Header>
@@ -77,19 +75,19 @@ const App: React.FC = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/temoins">
+          <Route path={`${baseUrl}/temoins`}>
             <Temoins />
           </Route>
-          <Route path="/informations">
+          <Route path={`${baseUrl}/information`}>
             <Information />
           </Route>
-          <Route path="/">
+          <Route path={`${baseUrl}/`}>
             <Home />
           </Route>
         </Switch>
       </Page>
     </Router>
   );
-}
+};
 
 export default App;

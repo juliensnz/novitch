@@ -20,13 +20,25 @@ const StyledCounter = styled.div`
   filter: grayscale(1) contrast(9);
 
   @media (max-width: 570px) {
-    grid-template-columns: repeat(1, minmax(50px, 1fr));
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    mix-blend-mode: initial;
+    filter: initial;
+    align-items: center;
   }
 `;
 
 const Count = styled.div`
   text-align: center;
+
+  @media (max-width: 570px) {
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100px;
+  }
 `;
 const Value = styled.div`
   font-size: 50px;
@@ -60,13 +72,13 @@ const useTimer = (date: number[]) => {
     return () => {
       clearInterval(timer.current);
     };
-  }, []);
+  }, [date]);
 
   return [days, hours, minutes, seconds];
 };
 
 const Counter = ({ date }: { date: number[] }) => {
-  const [hours, days, minutes, seconds] = useTimer(date);
+  const [days, hours, minutes, seconds] = useTimer(date);
 
   return (
     <StyledCounter>
@@ -75,7 +87,7 @@ const Counter = ({ date }: { date: number[] }) => {
         <Label>Jours</Label>
       </Count>
       <Count>
-        <Value>{hours}</Value>
+        <Value>{hours + 1}</Value>
         <Label>Heures</Label>
       </Count>
       <Count>
