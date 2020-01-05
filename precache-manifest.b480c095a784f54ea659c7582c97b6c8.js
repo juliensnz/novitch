@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1296b3eb4a661752fbf91a38b641f794",
+    "revision": "23c2e53080b85e91e4243a9d9e232c21",
     "url": "/novitch/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novitch/static/js/2.0baddb38.chunk.js.LICENSE"
   },
   {
-    "revision": "4f74173b32f1c426bfdf",
-    "url": "/novitch/static/js/main.84c45bed.chunk.js"
+    "revision": "64a08513196fc5b8f5db",
+    "url": "/novitch/static/js/main.e5656b7b.chunk.js"
   },
   {
     "revision": "eda519ef401b0b7924b3",
