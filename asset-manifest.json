@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/novitch/static/js/main.2b16f82c.chunk.js",
-    "main.js.map": "/novitch/static/js/main.2b16f82c.chunk.js.map",
+    "main.js": "/novitch/static/js/main.c4832860.chunk.js",
+    "main.js.map": "/novitch/static/js/main.c4832860.chunk.js.map",
     "runtime-main.js": "/novitch/static/js/runtime-main.79b5650e.js",
     "runtime-main.js.map": "/novitch/static/js/runtime-main.79b5650e.js.map",
-    "static/js/2.0baddb38.chunk.js": "/novitch/static/js/2.0baddb38.chunk.js",
-    "static/js/2.0baddb38.chunk.js.map": "/novitch/static/js/2.0baddb38.chunk.js.map",
+    "static/js/2.e016b01e.chunk.js": "/novitch/static/js/2.e016b01e.chunk.js",
+    "static/js/2.e016b01e.chunk.js.map": "/novitch/static/js/2.e016b01e.chunk.js.map",
     "index.html": "/novitch/index.html",
-    "precache-manifest.0e20bb98826e3345a462a2a50a0e0ff8.js": "/novitch/precache-manifest.0e20bb98826e3345a462a2a50a0e0ff8.js",
+    "precache-manifest.e9397922cad5fbdcf0e0167dd8c923c9.js": "/novitch/precache-manifest.e9397922cad5fbdcf0e0167dd8c923c9.js",
     "service-worker.js": "/novitch/service-worker.js",
-    "static/js/2.0baddb38.chunk.js.LICENSE": "/novitch/static/js/2.0baddb38.chunk.js.LICENSE"
+    "static/js/2.e016b01e.chunk.js.LICENSE": "/novitch/static/js/2.e016b01e.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.79b5650e.js",
-    "static/js/2.0baddb38.chunk.js",
-    "static/js/main.2b16f82c.chunk.js"
+    "static/js/2.e016b01e.chunk.js",
+    "static/js/main.c4832860.chunk.js"
   ]
 }
