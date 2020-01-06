@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import moment from "moment";
 import { Title } from "../component";
+import { useData } from "../data";
 
 const Container = styled.div`
   display: flex;
@@ -103,10 +104,13 @@ const Counter = ({ date }: { date: number[] }) => {
 };
 
 export const Home = () => {
+  const date = useData("pages.home.date");
+  const title = useData("pages.home.title");
+
   return (
     <Container>
-      <Title>Titre</Title>
-      <Counter date={[2020, 6, 20, 14, 0, 0]} />
+      <Title>{title}</Title>
+      <Counter date={date} />
     </Container>
   );
 };

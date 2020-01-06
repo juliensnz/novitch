@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Title, Text } from "../component";
 import { baseUrl } from "../App";
+import { useData } from "../data";
 
 const Page = styled.div``;
 const Faces = styled.div`
@@ -14,37 +15,27 @@ const Faces = styled.div`
   }
 `;
 
-const Face = styled.div`
-  /* max-height: 300px; */
-`;
+const Face = styled.div``;
 
 const Image = styled.img`
   width: 100%;
 `;
 
 export const Temoins = () => {
+  const text = useData("pages.temoins.text.top");
+  const title = useData("pages.temoins.title");
+  const temoins = useData("pages.temoins.temoins");
+
   return (
     <Page>
-      <Title>Mon super titre</Title>
-      <Text>
-        Morbi id tortor non quam aliquet eleifend. Etiam ultricies ac neque eget
-        volutpat. Fusce et ultricies elit, vel efficitur nisi. Aenean mattis
-        orci eget interdum iaculis. Maecenas odio eros, luctus in enim ac,
-        scelerisque condimentum leo. Ut rutrum gravida felis vel dictum.
-      </Text>
+      <Title>{title}</Title>
+      <Text>{text}</Text>
       <Faces>
-        <Face>
-          <Image src={`${baseUrl}/images/virge.jpg`} />
-        </Face>
-        <Face>
-          <Image src={`${baseUrl}/images/flo.jpg`} />
-        </Face>
-        <Face>
-          <Image src={`${baseUrl}/images/sebas.jpg`} />
-        </Face>
-        <Face>
-          <Image src={`${baseUrl}/images/jeff.jpg`} />
-        </Face>
+        {temoins.map((temoin: { image: string }) => (
+          <Face key={temoin.image}>
+            <Image src={`${baseUrl}/images/${temoin.image}`} />
+          </Face>
+        ))}
       </Faces>
     </Page>
   );

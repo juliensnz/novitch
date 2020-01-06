@@ -4,6 +4,7 @@ import { Temoins } from "./page/temoins";
 import { Information } from "./page/information";
 import { Home } from "./page/home";
 import styled from "styled-components";
+import { useData } from "./data";
 
 const Page = styled.div`
   display: flex;
@@ -55,20 +56,20 @@ const Item = styled.ul`
 export const baseUrl = "development" === process.env.NODE_ENV ? "" : "/novitch";
 
 const App: React.FC = () => {
+  const pages = useData("pages");
+
   return (
     <Router>
       <Page>
         <Header>
           <Menu>
-            <Item>
-              <Link to={`${baseUrl}/`}>Home</Link>
-            </Item>
-            <Item>
-              <Link to={`${baseUrl}/temoins`}>Les témoins</Link>
-            </Item>
-            <Item>
-              <Link to={`${baseUrl}/information`}>Informations</Link>
-            </Item>
+            {(Object.values(pages) as any[]).map(
+              (page: { menu: string; url: string }) => (
+                <Item key={page.url}>
+                  <Link to={`${baseUrl}/${page.url}`}>{page.menu}</Link>
+                </Item>
+              )
+            )}
           </Menu>
         </Header>
 

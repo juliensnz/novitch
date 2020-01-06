@@ -1,0 +1,36 @@
+{
+  "pages": {
+    "home": {
+      "title": "home",
+      "menu": "home",
+      "url": "",
+      "date": [2020, 6, 20, 14, 0, 0]
+    },
+    "temoins": {
+      "title": "Les témoins",
+      "menu": "Les témoins",
+      "url": "temoins",
+      "text": {
+        "top": "Morbi id tortor non quam aliquet eleifend. Etiam ultricies ac neque eget volutpat. Fusce et ultricies elit, vel efficitur nisi. Aenean mattis orci eget interdum iaculis. Maecenas odio eros, luctus in enim ac, scelerisque condimentum leo. Ut rutrum gravida felis vel dictum."
+      },
+      "temoins": [
+        {
+          "image": "virge.jpg"
+        },
+        {
+          "image": "flo.jpg"
+        },
+        {
+          "image": "sebas.jpg"
+        },
+        {
+          "image": "jeff.jpg"
+        }
+      ]
+    },
+    "informations": {
+      "menu": "Informations",
+      "url": "informations"
+    }
+  }
+}
